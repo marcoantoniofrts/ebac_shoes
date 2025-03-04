@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo e fonte */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Seção "Sobre a loja" */
+#sobre-a-loja {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.coluna-imagem img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+.coluna-texto {
+    max-width: 500px;
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.1em;
+}
+
+/* Seção de Produtos */
+#produtos {
+    padding: 40px;
+    background-color: #fff;
+}
+
+#produtos h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.produtos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.produto {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    width: 22%;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.produto img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.produto h3 {
+    margin: 10px 0;
+}
+
+.produto p {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+button.adicionar-carrinho {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button.adicionar-carrinho:hover {
+    background-color: #218838;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .coluna-imagem, .coluna-texto {
+        width: 100%;
+        text-align: center;
+    }
+
+    .produtos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .produto {
+        width: 80%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .produto {
+        width: 100%;
+    }
+}
